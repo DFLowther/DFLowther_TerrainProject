@@ -40,6 +40,34 @@ MonoBehaviour:
   maxNits:
     m_OverrideState: 1
     m_Value: 647
+--- !u!114 &-5897576143663754146
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
+  m_EditorClassIdentifier: 
+  active: 1
+  postExposure:
+    m_OverrideState: 0
+    m_Value: -3.5
+  contrast:
+    m_OverrideState: 1
+    m_Value: -30
+  colorFilter:
+    m_OverrideState: 1
+    m_Value: {r: 0.0444475, g: 0.03066039, b: 0.5, a: 1}
+  hueShift:
+    m_OverrideState: 0
+    m_Value: 23
+  saturation:
+    m_OverrideState: 1
+    m_Value: -23
 --- !u!114 &-5593241025600114425
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -158,6 +186,7 @@ MonoBehaviour:
   - {fileID: -1927798049912183591}
   - {fileID: -1229744748482543649}
   - {fileID: 5575970073603294358}
+  - {fileID: -5897576143663754146}
 --- !u!114 &5575970073603294358
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -173,28 +202,28 @@ MonoBehaviour:
   active: 1
   redOutRedIn:
     m_OverrideState: 1
-    m_Value: -51
+    m_Value: -131
   redOutGreenIn:
     m_OverrideState: 1
-    m_Value: -84
+    m_Value: -93
   redOutBlueIn:
     m_OverrideState: 1
-    m_Value: -11
+    m_Value: -37
   greenOutRedIn:
     m_OverrideState: 1
-    m_Value: 30
+    m_Value: -58
   greenOutGreenIn:
     m_OverrideState: 1
-    m_Value: 39
+    m_Value: 4
   greenOutBlueIn:
     m_OverrideState: 1
-    m_Value: 200
+    m_Value: 118
   blueOutRedIn:
     m_OverrideState: 1
-    m_Value: 17
+    m_Value: 1
   blueOutGreenIn:
     m_OverrideState: 1
-    m_Value: 148
+    m_Value: 45
   blueOutBlueIn:
     m_OverrideState: 1
-    m_Value: 200
+    m_Value: 80

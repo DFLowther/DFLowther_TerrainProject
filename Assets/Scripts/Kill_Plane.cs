@@ -19,7 +19,8 @@ public class Kill_Plane : MonoBehaviour
                 {
                     hasCalledReload = true;
 
-                    
+                int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene(currentSceneIndex);
                 }
         }
     }
