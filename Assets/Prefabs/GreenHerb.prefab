@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7695926661644042572}
   - component: {fileID: 5084850591499429190}
   - component: {fileID: 444397723510061634}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GreenHerb
   m_TagString: SpeedBoost
   m_Icon: {fileID: 0}
