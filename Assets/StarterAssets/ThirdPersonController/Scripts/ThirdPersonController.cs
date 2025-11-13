@@ -14,6 +14,9 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
+        private float boostTimer;
+        private bool boosting;
+
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -150,6 +153,9 @@ namespace StarterAssets
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+            boostTimer = 0;
+            boosting = false;
         }
 
         private void Update()
@@ -159,11 +165,34 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+
+            if (boosting)
+            {
+                boostTimer += Time.deltaTime;
+                if (boostTimer > 3)
+                {
+                    MoveSpeed = 2;
+                    SprintSpeed = 20;
+                    boostTimer = 0;
+                    boosting = false;
+                }
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if(other.tag == "SpeedBoost")
+            {
+                boosting = true;
+                MoveSpeed = 5;
+                SprintSpeed = 40;
+            }
         }
 
         private void LateUpdate()
         {
             CameraRotation();
+
         }
 
         private void AssignAnimationIDs()
